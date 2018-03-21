@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<style type="text/css">
+			
+		</style>
+		<link type="text/css" rel="styleSheet" href="canvascommon.css">
+	</head>
+	<body align="center" style="">
+		<DIV align="center" style="position:absolute; left: 35%;top:28%;height: 40%; width:30% ;background: linear-gradient(to bottom left,black,white);filter: drop-shadow(9px 9px 8px blue);">
+			<table style="text-align:center">
+			<br><tr>
+				<td>
+					<b>USERNAME</b><br><input id="username" type="text">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>PASSWORD</b><br><input id="password" type="password" >
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<br><button id="buttons" style="width:120px; height:30px;" onClick="notify()">LOG IN</button><br><br>
+				</td>
+			</tr>
+		</table>
+		New to CANVAS.COM???
+		<br><a href="pageregister.html" style="text-decoration:none;">Register Yourself</a>
+		</DIV>
+		
+		<script>
+				var username = document.getElementById("username");
+				var password = document.getElementById("password");
+				var anchor = document.createElement("A");
+				function notify()
+				{
+					if(username.length>=15 && username.length<=8)
+					{
+						alert("Username is wrong..."+<br>+"Please Enter Valid Username...<br>Username must between of 8 to 15 character long!>");
+					}
+					else if(password.length!=6)
+					{
+						alert("Password is wrong...<br>Please Enter Valid Password...<br>Password must be of 6 character long!");
+					}
+					else
+					{
+						anchor.href="canvas.com.html";
+					}
+				}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="canvascommon.css" type="text/css">
+		<script type="text/css">
+			div {
+				background-color: red;
+				animation-name: main;
+				animation-duration: 4s;
+			}
+			@keyframes main
+			{
+				from{color:red;}
+				to{color:yellow;}
+			}
+		</script>
+	</head>
+	<body onClick="titlepage()">
+		
+			<div align="center" id="grad" class="headings" style= "height:100%;width:100%;" ><span id="nongrad" style="position:absolute; top:28%; left:9%; font-size:2.5ex"></span></div>
+			<span style="position:absolute; left:380; top: 120; font-size:14ex;font-weight:bold;margin:auto;font-family:algerian;color:white;" class="titlepage" >WELCOME TO</span>
+			<span style="position:absolute;left:115 ; top: 200; font-size:25ex;font-weight:bold;margin:auto;font-family:algerian;color:white;" class="titlepage" >CANVAS.COM	</span>
+		<script>
+			var tp=document.getElementsByClassName('titlepage')[0];
+			var tp1=document.getElementsByClassName('titlepage')[1];
+			function titlepage()
+			{
+				//for(var col=0;col <=360;col = col+50)
+				{
+					tp.style.color="green";
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,92 @@
+<html>
+	<head>
+		<style type="text/css">
+			
+		</style>
+		<link type="text/css" rel="styleSheet" href="canvascommon.css">
+	</head>
+	<body align="center" style="">
+		<DIV align="center" style="margin:7% auto;height: 70%; width:70% ;background: linear-gradient(to bottom left,white,white);filter: drop-shadow(9px 9px 8px blue);">
+			<table style="text-align:center">
+			<br><tr>
+				<td>
+					<b>Name: </b><br><input class="name" placeholder="First Name" type="text"><input class="name" placeholder="Middle Name" type="text"><input class="name" placeholder="Last Name" type="text">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>UserName: </b><br><input id="username" placeholder="Between 8 to 15" type="text" >
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>Mobile Number: </b><br><input id="mobile" placeholder="10 digit mobile Number" type="text">
+				</td>
+			</tr><tr>
+				<td>
+					<b>Email ID: </b><br><input id="email" placeholder="eg: sradiek.inc@gmail.com" type="text">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>PASSWORD</b><br><input id="password" placeholder="Must be of 6 character"type="password" >
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<br><button id="buttons" style="width:120px; height:30px;" onClick="notify()">REGISTER</button><br><br>
+				</td>
+			</tr>
+		</table>
+		
+		</DIV>
+		
+		<script>
+				
+				var username = document.getElementById("username");
+				var password = document.getElementById("password");
+				var fname = document.getElementsByClassName("name")[0];
+				var mname = document.getElementsByClassName("name")[1];
+				var lname = document.getElementsByClassName("name")[2];
+				var mobile = document.getElementById("mobile");
+				var email = document.getElementById("email");
+				var anchor = document.createElement("A");
+				
+				function notify()
+				{
+					if(username.length>=15 && username.length<=8)
+					{
+						alert("Username is wrong...<br>Please Enter Valid Username...<br>Username must between of 8 to 15 character long!>");
+					}
+					/*else if(password.length!=6)
+					{
+						alert("Password is wrong...<br>Please Enter Valid Password...<br>Password must be of 6 character long!");
+					}*/
+					else if(fname.length>=20 && fname.length<=2)
+					{
+						alert("First Name cannot be too short or long...<br> First Name must contain between 2 to 20 characters");
+					}
+					else if(mname.length>=20 && mname.length<=1)
+					{
+						alert("Middle Name cannot be too short or long...<br> Middle Name must contain between 1 to 20 characters");
+					}
+					else if(lname.length>=20 && lname.length<=2)
+					{
+						alert("Last Name cannot be too short or long...<br> Last Name must contain between 2 to 20 characters");
+					}
+					/*else if(mobile.length!=10)
+					{
+						alert("Please Enter Valid Mobile Number...");
+					}*/
+					/*else if(email.value!="*@*.com")
+					{
+						alert("Email Id is Wrong...<br>Please Enter Valid Email Id");
+					}*/
+					else
+					{
+						anchor.href="canvas.com.html";
+					}
+				}
+		</script>
+	</body>
+</html>

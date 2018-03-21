@@ -1,0 +1,43 @@
+<style type="text/css">
+
+#img1{
+	-height:100%;
+	width:100%;
+	position:absolute;
+	filter:blur(10px);
+}
+#img2{
+	-height:100%;
+	width:100%;
+	position:absolute;
+	clip-path: url(#clipping);
+	
+}
+#clipping{
+	text-shadow: 3px 3px 5px green;
+	box-shadow: 10px 10px 5px green;
+}
+</style>
+
+<html>
+	<body>
+		<img id="img1" src="shahrukh-khan.jpg">
+		<img id="img2" src="shahrukh-khan.jpg">
+	</body>
+</html>
+
+<svg>
+  <defs>
+    <clipPath id="clipping">
+      <circle id="circle" cx="284" cy="213" r="70" />
+    </clipPath>
+  </defs>
+</svg>
+
+<script>
+	clip=document.getElementById("circle");
+	document.body.onmousemove=function(e){
+		clip.setAttribute("cx",e.offsetX);
+		clip.setAttribute("cy",e.offsetY);
+	}
+</script>
