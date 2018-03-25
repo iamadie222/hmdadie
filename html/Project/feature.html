@@ -1,68 +1,83 @@
 <html>
-	<head>
+
+<head>
 	<link rel="stylesheet" href="canvascommon.css" type="text/css">
 	<style type="text/css">
-		.span1{font-size:1.5em;text-decoration:none;font-weight:bold;color:Purple;}
+		.span1 {
+			font-size: 1.5em;
+			text-decoration: none;
+			font-weight: bold;
+			color: Purple;
+		}
 	</style>
 	<script href="jquery.js">
-	$(document).ready(function(){
-		S("button").mouseover(function(){
-			$("button").css("background-color","yellow");
+		$(document).ready(function () {
+			S("button").mouseover(function () {
+				$("button").css("background-color", "yellow");
+			});
 		});
-	});</script>
-	</head>
-	<body>
-		<div align="center" id="grad" class="headings" style= "height:150;width:100%;" ><span id="nongrad" style="position:absolute; top:28%; left:9%; font-size:2.5ex"></span></div>
-			<span style="position:absolute;left:450 ; top: 30; font-size:11ex;font-weight:bold;margin:auto;font-family:algerian;color:white;" class="titlepage" >CANVAS.COM	</span>
+	</script>
+</head>
+
+<body>
+	<div align="center" id="grad" class="headings" style="height:150;width:100%;">
+		<span id="nongrad" style="position:absolute; top:28%; left:9%; font-size:2.5ex"></span>
+	</div>
+	<span style="position:absolute;left:450 ; top: 30; font-size:11ex;font-weight:bold;margin:auto;font-family:algerian;color:white;"
+	    class="titlepage">CANVAS.COM </span>
+	</div>
+	<button id="buttons" style="margin:0 89.6%;height:8.3%; width:10%; font-size:3ex; font-weight:bold;" onClick="logout()">Log Out</button>
+	<button id="buttons" style="position:absolute;top:25.5%;margin:0 78.6%;height:8.1%; width:10%;font-size:3ex;font-weight:bold;"
+	    onClick="logout()">GALLEY</button>
+	<button id="buttons" style="position:absolute;top:25.5%;margin:0 68.6%;height:8.1%; width:10%;font-size:3ex;font-weight:bold;"
+	    onClick="logout()">EFFECTS</button>
+	<button id="buttons" style="position:absolute;top:25.5%;margin:0 58.6%;height:8.1%; width:10%;font-size:3ex;font-weight:bold;"
+	    onClick="logout()">ABOUT US</button>
+	<button id="buttons" style="position:absolute;top:25.5%;margin:0 48.6%;height:8.1%; width:10%;font-size:3ex;font-weight:bold;"
+	    onClick="logout()">HOME</button>
+	<a href="featurecrop.html">
+		<div align="center" style="height: 25%; width: 14%;margin: 1% 10%;float:left; ">
+			<div style="background-image:url(Images/crop.png);height:90%;width:100%;background-size:100% 100%; 					background-repeat:no-repeat;">
+			</div>
+			<span class="span1" onMouseover="style.color='red'" onMouseOut="style.color='black'">CROP YOUR IMAGE</span>
 		</div>
-		<button id="buttons" style="margin:0 89.6%;height:8.3%; width:10%; font-size:3ex; font-weight:bold;" onClick="logout()">Log Out</button >
-		<button id="buttons" style="position:absolute;top:25.5%;margin:0 78.6%;height:8.1%; width:10%;font-size:3ex;font-weight:bold;" onClick="logout()">GALLEY</button >
-		<button id="buttons" style="position:absolute;top:25.5%;margin:0 68.6%;height:8.1%; width:10%;font-size:3ex;font-weight:bold;" onClick="logout()">EFFECTS</button >
-		<button id="buttons" style="position:absolute;top:25.5%;margin:0 58.6%;height:8.1%; width:10%;font-size:3ex;font-weight:bold;" onClick="logout()">ABOUT US</button >
-		<button id="buttons" style="position:absolute;top:25.5%;margin:0 48.6%;height:8.1%; width:10%;font-size:3ex;font-weight:bold;" onClick="logout()">HOME</button >
-			<a href="featurecrop.html">
-			<div align="center" style="height: 25%; width: 14%;margin: 1% 10%;float:left; ">
-				<div style="background-image:url(Images/crop.png);height:90%;width:100%;background-size:100% 100%; 					background-repeat:no-repeat;">
-				</div>
-				<span class="span1" onMouseover="style.color='red'" onMouseOut="style.color='black'">CROP YOUR IMAGE</span>
+	</a>
+	<a href="featureresize.html">
+		<div align="center" style="height: 25%; width: 14%;margin: 2% 70%; ">
+			<div style="background-image:url(Images/resize.jpg);height:90%;width:100%;background-size:100% 100%;background-repeat:no-repeat;">
 			</div>
-			</a>
-			<a href="featureresize.html">
-				<div align="center" style="height: 25%; width: 14%;margin: 2% 70%; ">
-				<div style="background-image:url(Images/resize.jpg);height:90%;width:100%;background-size:100% 100%;background-repeat:no-repeat;">
-				</div>
-				<span class="span1" onMouseover="style.color='red'" onMouseOut="style.color='black'">RESIZE YOUR IMAGE</span>
+			<span class="span1" onMouseover="style.color='red'" onMouseOut="style.color='black'">RESIZE YOUR IMAGE</span>
+		</div>
+	</a>
+	<a href="featureeffect.html">
+		<div align="center" style="height: 25%; width: 14%;margin: 1% 40%; ">
+			<div style="background-image:url(Images/effect.png);height:90%;width:100%;background-size:100% 100%;background-repeat:no-repeat;">
 			</div>
-			</a>
-			<a href="featureeffect.html">
-				<div align="center" style="height: 25%; width: 14%;margin: 1% 40%; ">
-				<div style="background-image:url(Images/effect.png);height:90%;width:100%;background-size:100% 100%;background-repeat:no-repeat;">
-				</div>
-				<span class="span1" onMouseover="style.color='red'" onMouseOut="style.color='black'">EFFECTS ON YOUR IMAGE</span>
+			<span class="span1" onMouseover="style.color='red'" onMouseOut="style.color='black'">EFFECTS ON YOUR IMAGE</span>
+		</div>
+	</a>
+	<a href="featureframe.html">
+		<div align="Center" style="height: 25%; width: 14%;margin: 1% 10%;float:left ">
+			<div style="background-image:url(Images/frame.jpg);height:90%;width:100%;background-size:100% 100%;background-repeat:no-repeat;">
 			</div>
-			</a>
-			<a href="featureframe.html">
-				<div align="Center"style="height: 25%; width: 14%;margin: 1% 10%;float:left ">
-				<div style="background-image:url(Images/frame.jpg);height:90%;width:100%;background-size:100% 100%;background-repeat:no-repeat;">
-				</div>
-				<span class="span1" onMouseover="style.color='red'" onMouseOut="style.color='black'">FRAMES ON YOUR IMAGE</span>
+			<span class="span1" onMouseover="style.color='red'" onMouseOut="style.color='black'">FRAMES ON YOUR IMAGE</span>
+		</div>
+	</a>
+	<a href="featuretext.html">
+		<div align="center" style="height: 25%; width: 14%;margin: 2% 70%; ">
+			<div style="background-image:url(Images/text.png);height:90%;width:100%;background-size:100% 100%;background-repeat:no-repeat;">
 			</div>
-			</a>
-			<a href="featuretext.html">
-				<div align="center"style="height: 25%; width: 14%;margin: 2% 70%; ">
-				<div style="background-image:url(Images/text.png);height:90%;width:100%;background-size:100% 100%;background-repeat:no-repeat;">
-				</div>
-				<span class="span1" onMouseover="style.color='red'" onMouseOut="style.color='black'">TEXT ON YOUR IMAGE</span>
-			</div>
-			</a>
-			
-		<script>
+			<span class="span1" onMouseover="style.color='red'" onMouseOut="style.color='black'">TEXT ON YOUR IMAGE</span>
+		</div>
+	</a>
+
+	<script>
 		var anchor = document.createElement("A");
-			function logout()
-			{
-				anchor.href="pageLogin.html";
-			}
-		</script>
-	</body>
-	
+
+		function logout() {
+			anchor.href = "pageLogin.html";
+		}
+	</script>
+</body>
+
 </html>
