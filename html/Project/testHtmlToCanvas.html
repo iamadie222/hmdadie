@@ -1,0 +1,51 @@
+<html>
+	<div id="im">
+		<img src="Images/BackgroundImage.jpg" id="img" style="filter: grayscale(100%)">
+	</div>
+	<canvas id="can"></canvas>
+</html>
+<script src="js/html2canvas.min.js"></script>
+<script src="jquery.js"></script>
+<script>
+ function download(url, fullName) {
+  const anchor = document.createElement('a')
+  anchor.href = url
+  anchor.setAttribute('download', fullName)
+
+  anchor.click();
+}
+
+ function screenshot(imgNode, format = 'png', quality = 0.97) {
+  const canvas = document.getElementById("can")
+  window.can=canvas;
+  canvas.width = imgNode.width
+  canvas.height = imgNode.height
+
+  const context = canvas.getContext('2d')
+  context.filter = getComputedStyle(imgNode).filter
+
+  imgNode.setAttribute('crossOrigin', 'anonymous')
+	
+  context.drawImage(imgNode, 0, 0, canvas.width, canvas.height)
+  return;
+  const url = canvas.toDataURL(`image/${format}`, quality)
+
+  return {
+    url,
+    then: (cb) => {
+      cb(url)
+    },
+    download: (name = 'image') => {
+      download(url, `${name}.${format}`)
+    }
+  }
+}
+</script>
+<script>
+	html2canvas(document.querySelector("#im")).then(canvas => {
+    document.body.appendChild(canvas)
+    window.can=canvas;
+});
+
+
+</script>
