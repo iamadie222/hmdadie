@@ -7,17 +7,27 @@
 <script src="js/html2canvas.min.js"></script>
 <script src="jquery.js"></script>
 <script>
- function download(url, fullName) {
+function download(url, fullName) {
   const anchor = document.createElement('a')
   anchor.href = url
   anchor.setAttribute('download', fullName)
 
   anchor.click();
 }
+function download2(can){
+var link = document.createElement('a');
+link.href = can.toDataURL();
+link.download =  "asdfsdf.png";
 
- function screenshot(imgNode, format = 'png', quality = 0.97) {
-  const canvas = document.getElementById("can")
-  window.can=canvas;
+// create a mouse event
+var event = new MouseEvent('click');
+
+// dispatching it will open a save as dialog in FF
+link.dispatchEvent(event);
+}
+function screenshot(imgNode, format = 'png', quality = 0.97) {
+  const canvas = document.createElement('canvas')
+  window.canvas=canvas;
   canvas.width = imgNode.width
   canvas.height = imgNode.height
 
@@ -25,9 +35,8 @@
   context.filter = getComputedStyle(imgNode).filter
 
   imgNode.setAttribute('crossOrigin', 'anonymous')
-	
+
   context.drawImage(imgNode, 0, 0, canvas.width, canvas.height)
-  return;
   const url = canvas.toDataURL(`image/${format}`, quality)
 
   return {
@@ -42,10 +51,9 @@
 }
 </script>
 <script>
-	html2canvas(document.querySelector("#im")).then(canvas => {
-    document.body.appendChild(canvas)
-    window.can=canvas;
-});
+	
+screenshot($("#img")[0]);
+
 
 
 </script>
