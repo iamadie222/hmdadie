@@ -20,7 +20,13 @@
         lblBowler.Text = ds.Tables("players").Select("id = " + MatchStatus.Status("player_ball") + "")(0)("player_name")
         lblRuns.Text = dbc.getRuns(MatchStatus.Status("match_now"), MatchStatus.Status("team1"))
         lblWickets.Text = dbc.getWicketCount(MatchStatus.Status("match_now"), "")
-        lblOvers.Text = MatchStatus.Status("ball_now")
+        Dim ballno As String = MatchStatus.Status("ball_now")
+        If (Val(ballno) Mod 6 = 0) Then
+            If (dialogSelectBowler.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+                ReloadMatchStatus()
+            End If
+        End If
+        lblOvers.Text = OverFromBall(ballno) & "(" & MatchStatus.Status("ball_now") & ")"
         radioNormalBall.Checked = True
         '.Text = dbc.GetTeamName(MatchStatus.Status("team1"))
     End Sub
@@ -81,4 +87,11 @@
         End If
         Return "normal"
     End Function
+
+    Function OverFromBall(ByVal ball As String) As String
+        Dim dl As Integer = Val(ball)
+        Dim str As String = Math.Floor(dl / 6) & "." & CStr(dl Mod 6)
+        Return str
+    End Function
+
 End Class

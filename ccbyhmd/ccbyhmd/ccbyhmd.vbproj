@@ -73,6 +73,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CricketCounter.vb" />
+    <Compile Include="MatchForms\dialogSelectBatsman.Designer.vb">
+      <DependentUpon>dialogSelectBatsman.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MatchForms\dialogSelectBatsman.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MatchForms\dialogSelectBowler.Designer.vb">
+      <DependentUpon>dialogSelectBowler.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MatchForms\dialogSelectBowler.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MatchForms\frmStartMatch.Designer.vb">
       <DependentUpon>frmStartMatch.vb</DependentUpon>
     </Compile>
@@ -135,6 +147,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="MatchForms\dialogSelectBatsman.resx">
+      <DependentUpon>dialogSelectBatsman.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MatchForms\dialogSelectBowler.resx">
+      <DependentUpon>dialogSelectBowler.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MatchForms\frmStartMatch.resx">
       <DependentUpon>frmStartMatch.vb</DependentUpon>
     </EmbeddedResource>
