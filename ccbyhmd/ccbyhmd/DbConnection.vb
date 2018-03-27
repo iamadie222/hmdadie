@@ -1,6 +1,6 @@
 ﻿Imports System.Data.OleDb
 Public Class DbConnection
-    Private conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0; Data Source=E:\extra\bca\sem4\project\vbNet\ccbyhmd\ccbyhmdDb.accdb")
+    Private conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0; Data Source=E:\extra\bca\sem4\hmdadie\ccbyhmd\ccbyhmdDb.accdb")
     Private cmd As New OleDbCommand()
     Private da As New OleDbDataAdapter(cmd)
 

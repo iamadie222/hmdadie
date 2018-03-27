@@ -1,20 +1,23 @@
 ﻿Public Class frmDashboard
     Dim dbc As New DbConnection()
-
+    Dim ds As New DataSet
     Private Sub frmDashboard_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         MatchStatus.update()
     End Sub
 
     Private Sub frmDashboard_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        dbc.FillDs("select * from teams where id in(" + MatchStatus.Status("team1") + "," + MatchStatus.Status("team2") + ")", ds, "teams")
+        dbc.FillDs("select * from players where team_id in (" + MatchStatus.Status("team1") + "," + MatchStatus.Status("team2") + ")", ds, "players")
+
         ReloadMatchStatus()
     End Sub
 
     Sub ReloadMatchStatus()
-        lblBatingTeam.Text = dbc.GetTeamName(MatchStatus.Status("team1"))
-        lblBowlingTeam.Text = dbc.GetTeamName(MatchStatus.Status("team2"))
-        lblOnStrikeBatsman.Text = dbc.GetPlayerName(MatchStatus.Status("player_bat1"))
-        lblOffStrikeBatsman.Text = dbc.GetPlayerName(MatchStatus.Status("player_bat2"))
-        lblBowler.Text = dbc.GetPlayerName(MatchStatus.Status("player_ball"))
+        lblBatingTeam.Text = ds.Tables("teams").Select("id = " + MatchStatus.Status("team1") + "")(0)("team_name")
+        lblBowlingTeam.Text = ds.Tables("teams").Select("id = " + MatchStatus.Status("team2") + "")(0)("team_name")
+        lblOnStrikeBatsman.Text = ds.Tables("players").Select("id = " + MatchStatus.Status("player_bat1") + "")(0)("player_name")
+        lblOffStrikeBatsman.Text = ds.Tables("players").Select("id = " + MatchStatus.Status("player_bat2") + "")(0)("player_name")
+        lblBowler.Text = ds.Tables("players").Select("id = " + MatchStatus.Status("player_ball") + "")(0)("player_name")
         lblRuns.Text = dbc.getRuns(MatchStatus.Status("match_now"), MatchStatus.Status("team1"))
         lblWickets.Text = dbc.getWicketCount(MatchStatus.Status("match_now"), "")
         lblOvers.Text = MatchStatus.Status("ball_now")
