@@ -145,6 +145,24 @@
     <Compile Include="summary\frmBowlerSummary.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="summary\frmOversSummary.Designer.vb">
+      <DependentUpon>frmOversSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="summary\frmOversSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="summary\frmSummary.Designer.vb">
+      <DependentUpon>frmSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="summary\frmSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="summary\frmWicketSummary.Designer.vb">
+      <DependentUpon>frmWicketSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="summary\frmWicketSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TeamManagement\dialogEditPlayer.Designer.vb">
       <DependentUpon>dialogEditPlayer.vb</DependentUpon>
     </Compile>
@@ -197,6 +215,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="summary\frmBowlerSummary.resx">
       <DependentUpon>frmBowlerSummary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="summary\frmOversSummary.resx">
+      <DependentUpon>frmOversSummary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="summary\frmSummary.resx">
+      <DependentUpon>frmSummary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="summary\frmWicketSummary.resx">
+      <DependentUpon>frmWicketSummary.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TeamManagement\dialogEditPlayer.resx">
       <DependentUpon>dialogEditPlayer.vb</DependentUpon>

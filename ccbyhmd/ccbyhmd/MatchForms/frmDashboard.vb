@@ -8,6 +8,10 @@
     End Sub
 
     Private Sub frmDashboard_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        formLoad()
+    End Sub
+
+    Sub formLoad()
         dbc.FillDs("select * from matchs where id=" + MatchStatus.Status("match_now"), ds, "matchs")
         If (MatchStatus.Status("inning") = "2") Then
             MatchStatus.Status("team1") = ds.Tables("matchs").Rows(0)("team2")
@@ -15,10 +19,9 @@
         End If
         dbc.FillDs("select * from teams where id in(" + MatchStatus.Status("team1") + "," + MatchStatus.Status("team2") + ")", ds, "teams")
         dbc.FillDs("select * from players where team_id in (" + MatchStatus.Status("team1") + "," + MatchStatus.Status("team2") + ")", ds, "players")
-
-
         ReloadMatchStatus()
     End Sub
+
 
     Sub ReloadMatchStatus()
         Dim wicketCount As String = dbc.getWicketCount(MatchStatus.Status("match_now"), "")
@@ -29,7 +32,7 @@
             If (MatchStatus.Status("inning") = "1") Then
                 Dim frm As New dialogChangeInning()
                 If (frm.ShowDialog() = Windows.Forms.DialogResult.OK) Then
-                    ReloadMatchStatus()
+                    formLoad()
                 End If
             ElseIf (MatchStatus.Status("inning") = "2") Then
                 Dim bno1 As String = (Val(MatchStatus.Status("inning")) * Val(MatchStatus.Status("overs_now")) * 6) - (Val(MatchStatus.Status("overs_now")) * 6)

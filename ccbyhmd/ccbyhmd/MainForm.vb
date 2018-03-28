@@ -1,10 +1,10 @@
 ﻿Public Class MainForm
 
-    Private Sub DashboardToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DashboardToolStripMenuItem.Click
+    Private Sub DashboardToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
 
-    Private Sub OpenToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OpenToolStripMenuItem.Click
+    Private Sub OpenToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim frm As New frmDashboard()
         frm.MdiParent = Me
         frm.Show()
@@ -31,6 +31,7 @@
             Dim frm2 As New frmDashboard()
             frm2.MdiParent = Me
             frm2.Show()
+            panelHomeButtons.Visible = True
         Else
             Dim frm As New frmStartMatch
             If (frm.ShowDialog() = Windows.Forms.DialogResult.OK) Then
@@ -38,6 +39,7 @@
                 Dim frm2 As New frmDashboard()
                 frm2.MdiParent = Me
                 frm2.Show()
+                panelHomeButtons.Visible = True
             End If
         End If
     End Sub
@@ -51,5 +53,25 @@
     Private Sub BatsmanSummaryToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BatsmanSummaryToolStripMenuItem.Click
         Dim frm As New frmBatsmanSummary()
         frm.ShowDialog()
+    End Sub
+
+    Private Sub WicketSummaryToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles WicketSummaryToolStripMenuItem.Click
+        Dim frm As New frmWicketSummary()
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub btnManageTeams_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnManageTeams.Click
+        Dim frm As New frmTeamManagement()
+        frm.ShowDialog()
+
+    End Sub
+
+    Private Sub btnViewSummary_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnViewSummary.Click
+        Dim frm As New frmSummary()
+        frm.Show()
+    End Sub
+
+    Private Sub ExitToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ExitToolStripMenuItem.Click
+        Me.Close()
     End Sub
 End Class

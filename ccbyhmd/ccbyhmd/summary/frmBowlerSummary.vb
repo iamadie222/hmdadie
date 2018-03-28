@@ -2,9 +2,9 @@
     Dim dbc As New DbConnection()
     Dim ds As New DataSet()
     Private Sub frmBowlerSummary_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        dbc.FillDs("select * from matchs", ds, "matchs")
+        dbc.FillDs("select id,team1,team2,overs,id&'. '&(select team_name from teams where id=matchs.team1)&' VS '&(select team_name from teams where id=matchs.team2)&' on '&match_date as teamNames from matchs", ds, "matchs")
         comboSelectMatch.DataSource = ds.Tables("matchs")
-        comboSelectMatch.DisplayMember = "team1"
+        comboSelectMatch.DisplayMember = "teamNames"
         comboSelectMatch.ValueMember = "id"
     End Sub
 

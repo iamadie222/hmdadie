@@ -23,8 +23,6 @@ Partial Class MainForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.DashboardToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TeamToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManageTeamToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SummaryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -44,25 +42,12 @@ Partial Class MainForm
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DashboardToolStripMenuItem, Me.TeamToolStripMenuItem, Me.SummaryToolStripMenuItem, Me.ExitToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TeamToolStripMenuItem, Me.SummaryToolStripMenuItem, Me.ExitToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(736, 24)
         Me.MenuStrip1.TabIndex = 3
         Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'DashboardToolStripMenuItem
-        '
-        Me.DashboardToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenToolStripMenuItem})
-        Me.DashboardToolStripMenuItem.Name = "DashboardToolStripMenuItem"
-        Me.DashboardToolStripMenuItem.Size = New System.Drawing.Size(76, 20)
-        Me.DashboardToolStripMenuItem.Text = "Dashboard"
-        '
-        'OpenToolStripMenuItem
-        '
-        Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
-        Me.OpenToolStripMenuItem.Text = "Open"
         '
         'TeamToolStripMenuItem
         '
@@ -74,7 +59,7 @@ Partial Class MainForm
         'ManageTeamToolStripMenuItem
         '
         Me.ManageTeamToolStripMenuItem.Name = "ManageTeamToolStripMenuItem"
-        Me.ManageTeamToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.ManageTeamToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ManageTeamToolStripMenuItem.Text = "Manage Team"
         '
         'SummaryToolStripMenuItem
@@ -188,8 +173,6 @@ Partial Class MainForm
 
     End Sub
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
-    Friend WithEvents DashboardToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents OpenToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TeamToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ManageTeamToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents lblMain As System.Windows.Forms.Label

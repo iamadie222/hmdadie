@@ -37,7 +37,7 @@ Partial Class frmBowlerSummary
         Me.comboSelectMatch.FormattingEnabled = True
         Me.comboSelectMatch.Location = New System.Drawing.Point(13, 13)
         Me.comboSelectMatch.Name = "comboSelectMatch"
-        Me.comboSelectMatch.Size = New System.Drawing.Size(121, 21)
+        Me.comboSelectMatch.Size = New System.Drawing.Size(475, 21)
         Me.comboSelectMatch.TabIndex = 0
         '
         'dgvTeam1
