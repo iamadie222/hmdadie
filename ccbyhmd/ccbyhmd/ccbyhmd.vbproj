@@ -133,6 +133,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="summary\frmBatsmanSummary.Designer.vb">
+      <DependentUpon>frmBatsmanSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="summary\frmBatsmanSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="summary\frmBowlerSummary.Designer.vb">
+      <DependentUpon>frmBowlerSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="summary\frmBowlerSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TeamManagement\dialogEditPlayer.Designer.vb">
       <DependentUpon>dialogEditPlayer.vb</DependentUpon>
     </Compile>
@@ -179,6 +191,12 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="summary\frmBatsmanSummary.resx">
+      <DependentUpon>frmBatsmanSummary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="summary\frmBowlerSummary.resx">
+      <DependentUpon>frmBowlerSummary.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TeamManagement\dialogEditPlayer.resx">
       <DependentUpon>dialogEditPlayer.vb</DependentUpon>

@@ -60,3 +60,6 @@ C:\Users\hamid\Documents\projeccts\hmdadie\ccbyhmd\ccbyhmd\obj\x86\Debug\Windows
 E:\extra\bca\sem4\hmdadie\ccbyhmd\ccbyhmd\obj\x86\Debug\WindowsApplication1.dialogSelectBatsman.resources
 E:\extra\bca\sem4\hmdadie\ccbyhmd\ccbyhmd\obj\x86\Debug\WindowsApplication1.dialogSelectBowler.resources
 E:\extra\bca\sem4\hmdadie\ccbyhmd\ccbyhmd\obj\x86\Debug\WindowsApplication1.dialogChangeInning.resources
+C:\Users\hamid\Documents\projeccts\hmdadie\ccbyhmd\ccbyhmd\obj\x86\Debug\WindowsApplication1.dialogChangeInning.resources
+C:\Users\hamid\Documents\projeccts\hmdadie\ccbyhmd\ccbyhmd\obj\x86\Debug\WindowsApplication1.frmBowlerSummary.resources
+C:\Users\hamid\Documents\projeccts\hmdadie\ccbyhmd\ccbyhmd\obj\x86\Debug\WindowsApplication1.frmBatsmanSummary.resources

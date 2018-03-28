@@ -18,6 +18,7 @@
     End Sub
 
     Private Sub MainForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        
         MatchStatus.init()
         If (MatchStatus.Status("match_now") <> "-1") Then
             btnStartNewMatch.Text = "Continue Counting"
@@ -39,5 +40,16 @@
                 frm2.Show()
             End If
         End If
+    End Sub
+
+    Private Sub BowlerSummaryToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BowlerSummaryToolStripMenuItem.Click
+        Dim frm As New frmBowlerSummary()
+        frm.ShowDialog()
+    End Sub
+
+    
+    Private Sub BatsmanSummaryToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BatsmanSummaryToolStripMenuItem.Click
+        Dim frm As New frmBatsmanSummary()
+        frm.ShowDialog()
     End Sub
 End Class
