@@ -19,14 +19,13 @@
 
     Private Sub MainForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         MatchStatus.init()
-
-        If (MatchStatus.Status("match_now") <> vbNullString) Then
+        If (MatchStatus.Status("match_now") <> "-1") Then
             btnStartNewMatch.Text = "Continue Counting"
         End If
     End Sub
 
     Private Sub btnStartNewMatch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnStartNewMatch.Click
-        If (MatchStatus.Status("match_now") <> vbNullString) Then
+        If (MatchStatus.Status("match_now") <> "-1") Then
             panelHomeButtons.Visible = False
             Dim frm2 As New frmDashboard()
             frm2.MdiParent = Me

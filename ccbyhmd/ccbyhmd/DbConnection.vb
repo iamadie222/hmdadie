@@ -1,6 +1,6 @@
 ﻿Imports System.Data.OleDb
 Public Class DbConnection
-    Private conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\hamid\Documents\projeccts\hmdadie\ccbyhmd\ccbyhmdDb.accdb")
+    Private conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0; Data Source=E:\extra\bca\sem4\hmdadie\ccbyhmd\ccbyhmdDb.accdb")
     Private cmd As New OleDbCommand()
     Private da As New OleDbDataAdapter(cmd)
 
@@ -100,15 +100,16 @@ Public Class DbConnection
 
     Function getRuns(ByVal match_id As String, ByVal team_id As String) As String
         conn.Open()
+        Dim bno As String = (Val(MatchStatus.Status("inning")) * Val(MatchStatus.Status("overs_now")) * 6) - (Val(MatchStatus.Status("overs_now")) * 6)
 
-        cmd.CommandText = "select sum(score) from match_log where match_id=" + match_id
+        cmd.CommandText = "select sum(score) from match_log where match_id=" + match_id + " and ball_no > " + bno
         'MsgBox("select sum(score) from match_log where match_id=" + match_id + " and team1=" + team_id)
         Try
             Dim temp As String = "0"
             temp = cmd.ExecuteScalar()
             Return temp
         Catch ex As Exception
-            MsgBox(ex.Message)
+            'MsgBox(ex.Message)
         Finally
             conn.Close()
         End Try
@@ -116,14 +117,14 @@ Public Class DbConnection
     End Function
     Function getWicketCount(ByVal match_id As String, ByVal team_id As String) As String
         conn.Open()
-
-        cmd.CommandText = "select count(wicket) from match_log where not wicket=0 and match_id=" + match_id
+        Dim bno As String = (Val(MatchStatus.Status("inning")) * Val(MatchStatus.Status("overs_now")) * 6) - (Val(MatchStatus.Status("overs_now")) * 6)
+        cmd.CommandText = "select count(wicket) from match_log where not wicket=0 and match_id=" + match_id + " and ball_no > " + bno
         Try
             Dim temp As String = "0"
             temp = cmd.ExecuteScalar()
             Return temp
         Catch ex As Exception
-            MsgBox(ex.Message)
+            ' MsgBox(ex.Message)
         Finally
             conn.Close()
         End Try
@@ -138,6 +139,23 @@ Public Class DbConnection
         conn.Close()
         Return cnt
 
+    End Function
+
+    Function getTotalRunsOfPlayer(ByVal player_di As String, ByVal match_id As String) As String
+        conn.Open()
+
+        cmd.CommandText = "select sum(score) from match_log where player_bat1=" + player_di + " and match_id=" + match_id
+        Try
+            Dim temp As String = "0"
+            temp = cmd.ExecuteScalar()
+            Return temp
+        Catch ex As Exception
+            'MsgBox(ex.Message)
+        Finally
+            conn.Close()
+        End Try
+
+        Return "0"
     End Function
 
 

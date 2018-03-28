@@ -29,6 +29,8 @@
             MatchStatus.Status("team2") = comboBowlingTeam.SelectedValue
             MatchStatus.Status("match_now") = dbc.InsertNewmatch(MatchStatus.Status("team1"), MatchStatus.Status("team2"), tbMatchOvers.Text)
             MatchStatus.Status("ball_now") = "0"
+            MatchStatus.Status("overs_now") = tbMatchOvers.Text
+            MatchStatus.Status("inning") = "1"
             MatchStatus.update()
             Me.DialogResult = Windows.Forms.DialogResult.OK
 
