@@ -93,7 +93,7 @@ Partial Class frmBowlerSummary
         Me.Controls.Add(Me.dgvTeam1)
         Me.Controls.Add(Me.comboSelectMatch)
         Me.Name = "frmBowlerSummary"
-        Me.Text = "frmBowlerSummary"
+        Me.Text = "Bowler Summary"
         CType(Me.dgvTeam1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvTeam2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

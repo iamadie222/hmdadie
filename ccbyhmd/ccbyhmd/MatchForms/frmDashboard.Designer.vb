@@ -53,7 +53,6 @@ Partial Class frmDashboard
         Me.lblBatingTeam = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -396,17 +395,6 @@ Partial Class frmDashboard
         Me.Label18.Size = New System.Drawing.Size(698, 2)
         Me.Label18.TabIndex = 13
         '
-        'Label19
-        '
-        Me.Label19.Font = New System.Drawing.Font("Montserrat", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label19.Location = New System.Drawing.Point(12, 9)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(676, 28)
-        Me.Label19.TabIndex = 14
-        Me.Label19.Text = "India Vs Pak"
-        Me.Label19.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.radioWiedBall)
@@ -427,7 +415,6 @@ Partial Class frmDashboard
         Me.ClientSize = New System.Drawing.Size(700, 500)
         Me.ControlBox = False
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.Label19)
         Me.Controls.Add(Me.Label18)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnRun2)
@@ -480,6 +467,5 @@ Partial Class frmDashboard
     Friend WithEvents lblBatingTeam As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label18 As System.Windows.Forms.Label
-    Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
 End Class

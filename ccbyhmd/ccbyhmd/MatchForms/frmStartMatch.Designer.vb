@@ -212,7 +212,7 @@ Partial Class frmStartMatch
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "frmStartMatch"
-        Me.Text = "fromStartMatch"
+        Me.Text = "Start New Match"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)

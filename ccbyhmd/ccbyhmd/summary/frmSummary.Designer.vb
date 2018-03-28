@@ -66,7 +66,7 @@ Partial Class frmSummary
         Me.Controls.Add(Me.btnWicketSummary)
         Me.Controls.Add(Me.btnBatsmanSummary)
         Me.Name = "frmSummary"
-        Me.Text = "frmSummary"
+        Me.Text = "Summary"
         Me.ResumeLayout(False)
 
     End Sub

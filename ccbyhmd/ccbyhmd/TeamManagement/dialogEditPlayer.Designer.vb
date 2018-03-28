@@ -94,7 +94,7 @@ Partial Class dialogEditPlayer
         Me.Controls.Add(Me.lblPlayerType)
         Me.Controls.Add(Me.lblPlayerName)
         Me.Name = "dialogEditPlayer"
-        Me.Text = "dialogEditPlayer"
+        Me.Text = "Edit Player"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

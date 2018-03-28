@@ -23,17 +23,17 @@ Partial Class dialogChangeInning
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.lblBowlingTeam = New System.Windows.Forms.Label()
         Me.comboBowler = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lblBatingTeam = New System.Windows.Forms.Label()
         Me.comboOnStrikeBatsman = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.comboOffStrikeBatsman = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.lblBatingTeam = New System.Windows.Forms.Label()
-        Me.lblBowlingTeam = New System.Windows.Forms.Label()
         Me.btnStartInning = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -51,6 +51,17 @@ Partial Class dialogChangeInning
         Me.GroupBox2.TabIndex = 15
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Bowling Team"
+        '
+        'lblBowlingTeam
+        '
+        Me.lblBowlingTeam.AutoSize = True
+        Me.lblBowlingTeam.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBowlingTeam.ForeColor = System.Drawing.Color.DimGray
+        Me.lblBowlingTeam.Location = New System.Drawing.Point(15, 38)
+        Me.lblBowlingTeam.Name = "lblBowlingTeam"
+        Me.lblBowlingTeam.Size = New System.Drawing.Size(63, 20)
+        Me.lblBowlingTeam.TabIndex = 11
+        Me.lblBowlingTeam.Text = "Label7"
         '
         'comboBowler
         '
@@ -95,6 +106,17 @@ Partial Class dialogChangeInning
         Me.GroupBox1.TabIndex = 14
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Batting Team"
+        '
+        'lblBatingTeam
+        '
+        Me.lblBatingTeam.AutoSize = True
+        Me.lblBatingTeam.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBatingTeam.ForeColor = System.Drawing.Color.DimGray
+        Me.lblBatingTeam.Location = New System.Drawing.Point(15, 44)
+        Me.lblBatingTeam.Name = "lblBatingTeam"
+        Me.lblBatingTeam.Size = New System.Drawing.Size(63, 20)
+        Me.lblBatingTeam.TabIndex = 9
+        Me.lblBatingTeam.Text = "Label2"
         '
         'comboOnStrikeBatsman
         '
@@ -144,28 +166,6 @@ Partial Class dialogChangeInning
         Me.Label6.TabIndex = 6
         Me.Label6.Text = "Select On Strike Batsman"
         '
-        'lblBatingTeam
-        '
-        Me.lblBatingTeam.AutoSize = True
-        Me.lblBatingTeam.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBatingTeam.ForeColor = System.Drawing.Color.DimGray
-        Me.lblBatingTeam.Location = New System.Drawing.Point(15, 44)
-        Me.lblBatingTeam.Name = "lblBatingTeam"
-        Me.lblBatingTeam.Size = New System.Drawing.Size(63, 20)
-        Me.lblBatingTeam.TabIndex = 9
-        Me.lblBatingTeam.Text = "Label2"
-        '
-        'lblBowlingTeam
-        '
-        Me.lblBowlingTeam.AutoSize = True
-        Me.lblBowlingTeam.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBowlingTeam.ForeColor = System.Drawing.Color.DimGray
-        Me.lblBowlingTeam.Location = New System.Drawing.Point(15, 38)
-        Me.lblBowlingTeam.Name = "lblBowlingTeam"
-        Me.lblBowlingTeam.Size = New System.Drawing.Size(63, 20)
-        Me.lblBowlingTeam.TabIndex = 11
-        Me.lblBowlingTeam.Text = "Label7"
-        '
         'btnStartInning
         '
         Me.btnStartInning.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -185,7 +185,7 @@ Partial Class dialogChangeInning
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "dialogChangeInning"
-        Me.Text = "dialogChangeInning"
+        Me.Text = "Change Inning"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)

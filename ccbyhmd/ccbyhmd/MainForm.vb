@@ -31,7 +31,7 @@
             Dim frm2 As New frmDashboard()
             frm2.MdiParent = Me
             frm2.Show()
-            panelHomeButtons.Visible = True
+            'panelHomeButtons.Visible = True
         Else
             Dim frm As New frmStartMatch
             If (frm.ShowDialog() = Windows.Forms.DialogResult.OK) Then
@@ -39,7 +39,7 @@
                 Dim frm2 As New frmDashboard()
                 frm2.MdiParent = Me
                 frm2.Show()
-                panelHomeButtons.Visible = True
+                'panelHomeButtons.Visible = True
             End If
         End If
     End Sub

@@ -30,7 +30,7 @@ Partial Class frmOversSummary
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(731, 409)
         Me.Name = "frmOversSummary"
-        Me.Text = "frmOversSummary"
+        Me.Text = "Overs Summarty"
         Me.ResumeLayout(False)
 
     End Sub

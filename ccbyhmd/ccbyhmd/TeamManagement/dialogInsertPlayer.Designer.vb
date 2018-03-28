@@ -27,9 +27,9 @@ Partial Class dialogInsertPlayer
         Me.lblPlayerType = New System.Windows.Forms.Label()
         Me.lblPlayerName = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.rbBatsman = New System.Windows.Forms.RadioButton()
-        Me.rbBwoler = New System.Windows.Forms.RadioButton()
         Me.rbAllRounder = New System.Windows.Forms.RadioButton()
+        Me.rbBwoler = New System.Windows.Forms.RadioButton()
+        Me.rbBatsman = New System.Windows.Forms.RadioButton()
         Me.btnInsertPlayerCancel = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -80,17 +80,15 @@ Partial Class dialogInsertPlayer
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Player Type"
         '
-        'rbBatsman
+        'rbAllRounder
         '
-        Me.rbBatsman.AutoSize = True
-        Me.rbBatsman.Checked = True
-        Me.rbBatsman.Location = New System.Drawing.Point(7, 20)
-        Me.rbBatsman.Name = "rbBatsman"
-        Me.rbBatsman.Size = New System.Drawing.Size(66, 17)
-        Me.rbBatsman.TabIndex = 0
-        Me.rbBatsman.TabStop = True
-        Me.rbBatsman.Text = "Batsman"
-        Me.rbBatsman.UseVisualStyleBackColor = True
+        Me.rbAllRounder.AutoSize = True
+        Me.rbAllRounder.Location = New System.Drawing.Point(7, 68)
+        Me.rbAllRounder.Name = "rbAllRounder"
+        Me.rbAllRounder.Size = New System.Drawing.Size(80, 17)
+        Me.rbAllRounder.TabIndex = 2
+        Me.rbAllRounder.Text = "All Rounder"
+        Me.rbAllRounder.UseVisualStyleBackColor = True
         '
         'rbBwoler
         '
@@ -102,15 +100,17 @@ Partial Class dialogInsertPlayer
         Me.rbBwoler.Text = "Bowler"
         Me.rbBwoler.UseVisualStyleBackColor = True
         '
-        'rbAllRounder
+        'rbBatsman
         '
-        Me.rbAllRounder.AutoSize = True
-        Me.rbAllRounder.Location = New System.Drawing.Point(7, 68)
-        Me.rbAllRounder.Name = "rbAllRounder"
-        Me.rbAllRounder.Size = New System.Drawing.Size(80, 17)
-        Me.rbAllRounder.TabIndex = 2
-        Me.rbAllRounder.Text = "All Rounder"
-        Me.rbAllRounder.UseVisualStyleBackColor = True
+        Me.rbBatsman.AutoSize = True
+        Me.rbBatsman.Checked = True
+        Me.rbBatsman.Location = New System.Drawing.Point(7, 20)
+        Me.rbBatsman.Name = "rbBatsman"
+        Me.rbBatsman.Size = New System.Drawing.Size(66, 17)
+        Me.rbBatsman.TabIndex = 0
+        Me.rbBatsman.TabStop = True
+        Me.rbBatsman.Text = "Batsman"
+        Me.rbBatsman.UseVisualStyleBackColor = True
         '
         'btnInsertPlayerCancel
         '
@@ -133,7 +133,7 @@ Partial Class dialogInsertPlayer
         Me.Controls.Add(Me.lblPlayerType)
         Me.Controls.Add(Me.lblPlayerName)
         Me.Name = "dialogInsertPlayer"
-        Me.Text = "dialogInsertPlayer"
+        Me.Text = "Add Player"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)

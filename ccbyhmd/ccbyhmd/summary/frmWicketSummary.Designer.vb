@@ -93,7 +93,7 @@ Partial Class frmWicketSummary
         Me.Controls.Add(Me.dgvTeam1)
         Me.Controls.Add(Me.comboSelectMatch)
         Me.Name = "frmWicketSummary"
-        Me.Text = "frmWicketSummary"
+        Me.Text = "Wicket Summary"
         CType(Me.dgvTeam2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvTeam1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

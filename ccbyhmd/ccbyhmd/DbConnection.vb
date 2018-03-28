@@ -153,6 +153,7 @@ Public Class DbConnection
             'MsgBox(ex.Message)
         Finally
             conn.Close()
+
         End Try
 
         Return "0"

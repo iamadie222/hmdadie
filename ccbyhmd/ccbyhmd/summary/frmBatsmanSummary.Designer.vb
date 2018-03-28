@@ -93,7 +93,7 @@ Partial Class frmBatsmanSummary
         Me.Controls.Add(Me.dgvTeam1)
         Me.Controls.Add(Me.comboSelectMatch)
         Me.Name = "frmBatsmanSummary"
-        Me.Text = "frmBatsmanSummary"
+        Me.Text = "Batsman Summary"
         CType(Me.dgvTeam2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvTeam1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
