@@ -27,6 +27,12 @@ Partial Class MainForm
         Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TeamToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManageTeamToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SummaryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BatsmanSummaryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BowlerSummaryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.WicketSummaryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OversSummaryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.lblMain = New System.Windows.Forms.Label()
         Me.btnStartNewMatch = New System.Windows.Forms.Button()
         Me.btnManageTeams = New System.Windows.Forms.Button()
@@ -38,7 +44,7 @@ Partial Class MainForm
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DashboardToolStripMenuItem, Me.TeamToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DashboardToolStripMenuItem, Me.TeamToolStripMenuItem, Me.SummaryToolStripMenuItem, Me.ExitToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(736, 24)
@@ -70,6 +76,43 @@ Partial Class MainForm
         Me.ManageTeamToolStripMenuItem.Name = "ManageTeamToolStripMenuItem"
         Me.ManageTeamToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.ManageTeamToolStripMenuItem.Text = "Manage Team"
+        '
+        'SummaryToolStripMenuItem
+        '
+        Me.SummaryToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BatsmanSummaryToolStripMenuItem, Me.BowlerSummaryToolStripMenuItem, Me.WicketSummaryToolStripMenuItem, Me.OversSummaryToolStripMenuItem})
+        Me.SummaryToolStripMenuItem.Name = "SummaryToolStripMenuItem"
+        Me.SummaryToolStripMenuItem.Size = New System.Drawing.Size(70, 20)
+        Me.SummaryToolStripMenuItem.Text = "Summary"
+        '
+        'BatsmanSummaryToolStripMenuItem
+        '
+        Me.BatsmanSummaryToolStripMenuItem.Name = "BatsmanSummaryToolStripMenuItem"
+        Me.BatsmanSummaryToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
+        Me.BatsmanSummaryToolStripMenuItem.Text = "Batsman Summary"
+        '
+        'BowlerSummaryToolStripMenuItem
+        '
+        Me.BowlerSummaryToolStripMenuItem.Name = "BowlerSummaryToolStripMenuItem"
+        Me.BowlerSummaryToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
+        Me.BowlerSummaryToolStripMenuItem.Text = "Bowler Summary"
+        '
+        'WicketSummaryToolStripMenuItem
+        '
+        Me.WicketSummaryToolStripMenuItem.Name = "WicketSummaryToolStripMenuItem"
+        Me.WicketSummaryToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
+        Me.WicketSummaryToolStripMenuItem.Text = "Wicket Summary"
+        '
+        'OversSummaryToolStripMenuItem
+        '
+        Me.OversSummaryToolStripMenuItem.Name = "OversSummaryToolStripMenuItem"
+        Me.OversSummaryToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
+        Me.OversSummaryToolStripMenuItem.Text = "Overs Summary"
+        '
+        'ExitToolStripMenuItem
+        '
+        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'lblMain
         '
@@ -154,5 +197,11 @@ Partial Class MainForm
     Friend WithEvents btnManageTeams As System.Windows.Forms.Button
     Friend WithEvents btnViewSummary As System.Windows.Forms.Button
     Friend WithEvents panelHomeButtons As System.Windows.Forms.Panel
+    Friend WithEvents SummaryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents BatsmanSummaryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents BowlerSummaryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents WicketSummaryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents OversSummaryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ExitToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
