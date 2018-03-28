@@ -32,7 +32,15 @@
                     ReloadMatchStatus()
                 End If
             ElseIf (MatchStatus.Status("inning") = "2") Then
-                MsgBox("match Finished")
+                Dim bno1 As String = (Val(MatchStatus.Status("inning")) * Val(MatchStatus.Status("overs_now")) * 6) - (Val(MatchStatus.Status("overs_now")) * 6)
+                If (Val(ballno) >= Val(MatchStatus.Status("inning")) * Val(MatchStatus.Status("overs_now")) * 6) Then
+                    dbc.execute("update status set status_value = '-1'")
+                    MatchStatus.init()
+                    MsgBox("match Finished")
+                    Me.Close()
+                    Return
+                End If
+
             End If
         End If
         If (isWicket) Then
